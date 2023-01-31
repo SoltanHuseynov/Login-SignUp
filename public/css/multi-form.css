@@ -1,0 +1,95 @@
+.multi-form{
+    position: relative;
+    overflow: hidden;    
+}
+.box > h3{
+    text-align: center;
+    margin: 5;
+}
+.box{
+    border:none;
+   border-radius: 10px;
+   background:rgba(59, 59, 59, 0.6);
+   width: 600px; 
+   height: 500px;
+   margin:0 auto;
+   margin-top: 235;
+   padding: 0.5rem;
+   animation: fade 200ms ease-in-out forwards
+}
+
+.box.active{
+    animation: slide 110ms 20ms ease-in-out both;
+}
+
+.box button{
+    margin: 10;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+    
+    
+}
+
+.form-group > input{
+    font-size: 1rem;
+    width: 250;
+    margin: 0 auto;
+    margin-top: .80em;
+}
+
+.hide{
+    display: none;
+}
+@keyframes slide {
+    0% {
+      transform: translateY(250%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+  
+@keyframes fade {
+    0% {
+      transform: scaleY(1); 
+      opacity: 1;
+      
+    }
+    50% {
+       transform: scaleY(1);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      transform: scaleY(0);
+    }
+}
+/* the step 3  button customize*/
+.bt-bar{
+    margin-top: 6rem;
+    margin-right:2rem ;
+    float: right;
+  
+}
+.bt-bar-down{
+    margin-top: 9rem;
+    margin-right:2rem ;
+    float: right;
+}
+.btn-back{
+    color:#fff;
+    border-color: #fff;
+}
+/* password eyes icon */
+.eye{
+    margin: 0 auto;
+    margin-left: 24em;
+    transform: translateY(-30px);
+    cursor: pointer;
+}

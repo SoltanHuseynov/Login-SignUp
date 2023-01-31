@@ -1,0 +1,56 @@
+.bt-position-tel{
+    margin: 0 auto;
+    
+}
+.bt-code-bar{
+    padding: 10px;
+    background-color: #ffff;
+    border: 1px solid;
+    display: inline;
+    cursor: pointer;
+    color: rgb(138, 135, 135);
+    font-weight: 500;
+
+}
+.bt-code-bar:hover{
+    background-color: rgb(238, 234, 234);
+    transition: 0.4s;
+}
+#phone{
+    padding: 10px;
+}
+.bar-list{
+    content: "";
+    position: absolute;
+    display: none;
+    transition: 0.4s;
+    transform: translateY(-0.90rem);
+    border: none;
+    background-color: #ffff;
+    width: 200px;
+    height: 150;
+}
+.bar-list img{
+    margin-left: 10px;
+    z-index: 1;
+}
+.bar-list span{
+    color: rgb(138, 135, 135);
+    margin: 10px;
+    word-spacing: 10px;
+    
+}
+.nav-list{
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+.nav-list:hover{
+    background-color: #ECECEC;
+    box-shadow: 0px 0px 4px;
+    
+    transition: 0.2s;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}

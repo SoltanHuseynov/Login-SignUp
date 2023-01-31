@@ -1,0 +1,73 @@
+body{
+    background-image: url("../img/large2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.m-board{
+   border:none;
+   border-radius: 10px;
+   background:rgba(59, 59, 59, 0.6);
+   width: 600px; 
+   height: 500px;
+   animation: fade 250ms ease-in-out forwards;
+   
+}
+.inform{
+    margin-top: 150px;
+}
+input{
+    margin: 15px;
+    border: none;
+    outline: none;
+}
+
+.text{
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.flex-r{
+    margin-left: 15px;
+}
+.btn{
+    border:1.5px solid;
+    padding: 8px 25px;
+}
+
+.nav-input{
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    margin-top:65%;
+}
+.btn-G{
+    border-radius: 10px;
+    padding:15px;
+    border:none;
+}
+.board{
+    margin-right: 10px;
+}
+.stick{
+    
+    border-bottom: 1.6px solid rgb(184, 184, 184);
+    width: 20%;
+    height: 10px;
+    
+}
+.stick{
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    margin-top:48%;
+}
+.eye-one{
+    margin: 0 auto;
+    transform: translateY(-45px);
+    margin-left: 13em;
+    cursor: pointer;
+}
