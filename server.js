@@ -22,8 +22,8 @@ fetch("https://raw.githubusercontent.com/SoltanHuseynov/basic-datas/main/test1.j
 .then(res=>{
     return res.json()
 }).then(data=>{
-    App.listen(data.port[0],"192.168.1.105",()=>{
-        console.info(`http://192.168.1.105:${data.port[0]}`)
+    App.listen(data.port[0],()=>{
+        console.info(`http://${data.ip[0]}:${data.port[0]}`)
     })
     
 })
