@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/code-bar.css">
+        <link rel="stylesheet" href="/css/multi-form.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+        <script defer src="../../main.js"></script>
+    </head>
+    <body>
+       
+        <form id="test" data-multi-step class="multi-form">
+            <div class="box" data-step>
+                <div class="form-group" data-input> 
+                    <input type="username"  data-username id="username" name="username" class="text" placeholder="username">
+                    <input type="email" name="email" class="text"  placeholder="Email">
+                </div>
+                <div class="bt-bar">
+                    <button type="button" data-next class="btn btn-outline-primary" data-next>Next</button>
+                </div>
+            </div>
+            <div class="box" data-step>
+                <div class="form-group " data-input>
+                    <input type="password" name="password" class="text " data-password placeholder="new password" maxlength="15"/> 
+                    <i class="bi-eye-fill eye"></i>
+                    <input type="password" class="text" data-password placeholder="Confirm password" maxlength="15"/> 
+                    <i class="bi-eye-fill eye"></i>
+                </div>
+                <div class="bt-bar">
+                    <button type="button" class="btn btn-outline-secondary btn-back" data-back >Back</button>
+                    <button type="button" data-next class="btn btn-outline-primary" data-next>Next</button>
+                </div>
+            </div>
+            <div class="box" data-step>
+                <div class="form-group" data-input>
+                    <div class="bt-position-tel " >
+                        <div class="bt-code-bar text " id="code-bar" >
+                            <img class="data-list " src="https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/AC.svg" width="25">
+                            <span id="tel-code" data-value></span>
+                        </div>
+                        <input type="tel" id="phone" name="phone"  class="tel-number text" placeholder="Tel">
+                        <section class="bar-list overflow-auto" ></section>
+                        
+                    </div>
+                </div>
+                <div class="bt-bar-down">
+                    <button type="button" class="btn btn-outline-secondary btn-back" data-back >Back</button>
+                    <button id="link2" data-end class="btn btn-outline-success" >Log in</button>
+                </div>
+            </div>
+
+        </form>
+       
+          
+        <!-- <script src="../jqu/script.js"></script> -->
+    </body>
+        
+       
+</html>
