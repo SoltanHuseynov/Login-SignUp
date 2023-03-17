@@ -40,6 +40,7 @@ input{
 
 .nav-input{
     position: absolute;
+    text-align: center;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     margin-top:65%;
@@ -70,4 +71,11 @@ input{
     transform: translateY(-45px);
     margin-left: 13em;
     cursor: pointer;
+}
+
+
+
+#div-span{
+    color: red;
+    font-size: 20px;
 }

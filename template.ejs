@@ -11,17 +11,21 @@
     </head>
     <body>    
         <div class="position-absolute top-50 start-50 translate-middle shadow p-3 mb-5 rounded m-board">
-            <form id="idform" class="inform position-absolute  start-50 translate-middle d-flex flex-column mb-3">
-                <input type="username" name="username" class="text" placeholder="username" >
-               <input type="password" name="password" class="text" id="passShow" placeholder="password" maxlength="15" >
+            <form id="idform" class="inform position-absolute  start-50 translate-middle d-flex flex-column mb-3"  action="/" method="post" >
+                <input type="username" name="username" id="username" class="text" placeholder="username" required>
+               <input type="password" name="password" class="text" id="passShow" placeholder="password" maxlength="15" required>
                <i class="bi-eye-fill eye-one"></i>
                <nav class=" flex-r flex-row ">
-                    <a id="link" class="btn btn-outline-primary">Sign up</a>
-                    <input class="btn btn-outline-success"  type="submit" value="Log in">
+                    <a id="link" class="btn btn-outline-primary" type="submit" >Sign up</a>
+                    <input  data-send class="btn btn-outline-success"  type="submit" value="Log in">
                </nav>
             </form>
             <p class="stick"></p>
+            <!-- <div class="div-span">
+                <span>password is false</span>
+            </div> -->
             <nav class="nav-input ">
+                <span id="div-span"><%=span %></span>
                 <button id="event" class="btn-G shadow p-3 mb-5 rounded"> <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" width="25" class="board"> Continue with Google</button>
             </nav>
             

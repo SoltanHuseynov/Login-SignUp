@@ -13,11 +13,11 @@
     </head>
     <body>
        
-        <form id="test" data-multi-step class="multi-form">
+        <form id="test" data-multi-step class="multi-form"  action="/account/create"  method="post">
             <div class="box" data-step>
                 <div class="form-group" data-input> 
                     <input type="username"  data-username id="username" name="username" class="text" placeholder="username">
-                    <input type="email" name="email" class="text"  placeholder="Email">
+                    <input type="email" data-email name="email" class="text"  placeholder="Email">
                 </div>
                 <div class="bt-bar">
                     <button type="button" data-next class="btn btn-outline-primary" data-next>Next</button>

@@ -12,7 +12,7 @@ module.exports={
     },
     plugins:[
         new HtmlWebpackPlugin({
-            template:"template.ejs",
+            template:"!raw-loader!./template.ejs",
             filename:"template/index.ejs"
         })
     ],

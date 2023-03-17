@@ -2,24 +2,31 @@
 const express=require("express")
 const path=require("path")
 const bodyParser=require("body-parser")
-const cheerio = require('cheerio');
-const fs=require("fs")
+
+const md5=require("md5")
 
 const {Profile}=require("./src/server/toGetFile")
-// const {signIn}=require("./src/server/account")
-
-
+const {signIn}=require("./src/server/account")
+const {setLogin}=require("./src/server/login")
 const App=express()
+
+
 App.use(express.static(__dirname+`/public`))
 App.use(bodyParser.urlencoded({extended:true}))
 App.use(bodyParser.json())
+// App.use(layouts)
 App.set("views",path.join(__dirname+"/public/template"))
 App.set(`view engine`,`ejs`)
 
-let userId=00
+
 
 App.get(`/`,(req,res)=>{
-    res.render(`index`)
+    res.render(`index`,{span:undefined})
+})
+
+App.post("/",(req,res,next)=>{
+    ProfileUser(req.body.username,true)
+    setLogin(res,req.body.username,md5(req.body.password))
     
 })
 
@@ -28,16 +35,26 @@ App.get(`/account/create`,(req,res)=>{
     
 })
 
-
-App.post("/account/profile",(req,res)=>{
-    userId+=1
-    // signIn(req.body)
-    console.info(req.body)
-    res.render("account/profile")
+App.post("/account/create",(req,res)=>{
+    signIn(req.body.username,req.body.email,req.body.password,req.body.phone)
+    ProfileUser(req.body.username,false)
+    setTimeout(()=>{
+        res.redirect(`/account/${req.body.username}`)
+    },2500)
 })
-// App.post("/",(req,res)=>{
-//     res.render('index')
-// })
+
+function ProfileUser(user,loop){
+    if(loop){
+        App.get(`/account/${user}`,(req,res)=>{
+            res.render(`account/${user}`)
+        })
+    }else{
+        App.get(`/account/${user}`,(req,res)=>{
+            res.render(`account/${user}`)
+        })
+    }
+}
+
 setTimeout(()=>{
     Profile().then(index=>{
         index.forEach(url=>{
@@ -50,7 +67,7 @@ setTimeout(()=>{
             }
         })
     })
-},1500)
+},10)
 
 fetch("https://raw.githubusercontent.com/SoltanHuseynov/basic-datas/main/localhost.json")
 .then(res=>{

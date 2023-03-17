@@ -4,6 +4,7 @@ $(`#link`).click(()=>{
 	window.location.href="/account/create"
 })
 
+
 //step2:password button
 let reg=/[a-z|A-Z,.!{}:";'`!&*]/g
 $(`#phone`).keypress(()=>{
@@ -160,7 +161,13 @@ span.style.textAlign="center"
 span.innerHTML="the charset must be 6 in length"
 
 function ValidityPass(){
-	if(getPass[0].value===getPass[1].value){		
+	if(getPass[0].value.length<6&&getPass[1].value.length<6&&getPass[0].value.length!=0){
+		formGroup[1].appendChild(span)
+		getPass[0].style.border="2px solid red"
+		getPass[1].style.border="2px solid red"
+		getIndex=0
+	}
+	else if(getPass[0].value===getPass[1].value){		
 		return true
 	}
 	else if(getPass[0].value.length<6&&getPass[0].value.length!=0){
@@ -168,7 +175,6 @@ function ValidityPass(){
 		getPass[1].style.border="none"
 		formGroup[1].appendChild(span)
 		getIndex=0
-		// console.info(getPass[0].value.length=10)
 	}
 	else if(getPass[1].value.length<6&&getPass[1].value.length!=0){
 		getPass[1].style.border="2px solid red"
@@ -189,7 +195,6 @@ function NormalStream(){
 	getPass[1].style.border="none"
 	span.remove()
 }
-
 
 //password show 
 $(`.eye`).click(()=>{
